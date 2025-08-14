@@ -33,28 +33,44 @@
       background-color: var(--bg);
       color: var(--text);
     }
+
+    /* HEADER */
     header {
       background: linear-gradient(135deg, var(--purple) 60%, var(--orange));
       color: white;
       text-align: center;
-      padding: 1rem;
-    }
-    header img {
-      max-height: 240px;
-      width: auto;
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .header-content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
+      gap: 0.25rem;
       text-align: center;
+      max-width: 800px;
     }
-    h1, h2, h3, h4, h5, h6 {
+    header img {
+      max-height: 200px;
+      width: auto;
+    }
+    h1 {
       font-family: 'Merriweather', serif;
-      margin: 0.25rem 0 1rem;
+      margin: 0.25rem 0 0.25rem;
     }
+    .tagline {
+      font-size: 1.1rem;
+      font-weight: 400;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      margin: 0;
+      /* Modern browsers try to balance line breaks to avoid widows */
+      text-wrap: balance;
+    }
+
+    /* NAV */
     nav {
       background: linear-gradient(135deg, var(--purple) 60%, var(--orange));
       display: flex;
@@ -77,16 +93,8 @@
       background: rgba(255,255,255,0.15);
       outline: none;
     }
-    .hero {
-      background-image: url('images/boil_spread.jpg');
-      background-size: cover;
-      background-position: center;
-      min-height: 35vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+
+    /* SECTIONS */
     section {
       padding: 2rem 1rem;
       max-width: 1000px;
@@ -95,6 +103,7 @@
       border-radius: 12px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.06);
     }
+
     /* Calendar responsive container */
     .ratio-4x3 {
       position: relative;
@@ -109,6 +118,7 @@
       width: 100%; height: 100%;
       border: 0;
     }
+
     /* Blogger iframe (height set by JS for single-scroll experience) */
     .blog-iframe {
       width: 100%;
@@ -116,6 +126,7 @@
       border-radius: 12px;
       display: block;
     }
+
     ul { padding-left: 1.25rem; }
 
     /* Responsive adjustments */
@@ -142,9 +153,7 @@
     <div class="header-content">
       <img src="images/DixieFarmsLogoTransparent.png" alt="Dixie Farms Logo">
       <h1>Dixie Farms Crawfish & Seafood</h1>
-    </div>
-    <div class="hero" style="height: auto; padding: 1rem 2rem;">
-      <p style="margin: 0; font-size: 1.1rem; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.6);">
+      <p class="tagline">
         From private boils to festivals, the Purple People Feeder delivers bold Louisiana flavor wherever we roll.
       </p>
     </div>
@@ -234,9 +243,10 @@
     <p>Follow us on <a href="https://www.facebook.com/dixiefarmsco" target="_blank" rel="noopener">Facebook</a> or <a href="https://www.instagram.com/dixiefarmsco" target="_blank" rel="noopener">Instagram</a>, or reach out to <a href="mailto:dixiefarmsco@gmail.com">dixiefarmsco@gmail.com</a> with any questions or booking inquiries.</p>
   </section>
 
-  <!-- Adaptive height for blog iframe (cross-origin safe) -->
+  <!-- Adaptive height for blog iframe (cross-origin safe) + widont to avoid tagline widow -->
   <script>
     (function() {
+      // Blogger iframe sizing
       const MIN_HEIGHT = 900;
       const VIEWPORT_MULT = 1.2;
       function resizeBlogFrame() {
@@ -247,6 +257,17 @@
       }
       window.addEventListener('load', resizeBlogFrame);
       window.addEventListener('resize', resizeBlogFrame);
+
+      // Widont: keep last two words of tagline together to prevent single-word wrap
+      function widont(el) {
+        if (!el) return;
+        const html = el.innerHTML.trim();
+        // Replace the last normal space with a non-breaking space
+        el.innerHTML = html.replace(/\s+([^\s<]+)\s*$/, '&nbsp;$1');
+      }
+      window.addEventListener('DOMContentLoaded', function() {
+        widont(document.querySelector('.tagline'));
+      });
     })();
   </script>
 </body>
