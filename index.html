@@ -41,14 +41,15 @@
     }
     header img {
       max-height: 240px;
-      vertical-align: middle;
+      width: auto;
     }
     .header-content {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
+      gap: 0.5rem;
+      text-align: center;
     }
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Merriweather', serif;
@@ -94,19 +95,7 @@
       border-radius: 12px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.06);
     }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    /* Embeds */
-    .embed-responsive {
-      position: relative;
-      width: 100%;
-      border: 0;
-      display: block;
-    }
-    /* Calendar uses aspect-ratio style container */
+    /* Calendar responsive container */
     .ratio-4x3 {
       position: relative;
       padding-bottom: 75%;
@@ -120,23 +109,39 @@
       width: 100%; height: 100%;
       border: 0;
     }
-    /* Blogger: single scroll, no inner scrollbar */
+    /* Blogger iframe (height set by JS for single-scroll experience) */
     .blog-iframe {
       width: 100%;
       border: none;
-      min-height: 1600px; /* Adjust as you like */
       border-radius: 12px;
+      display: block;
     }
     ul { padding-left: 1.25rem; }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header img {
+        max-height: 150px;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+    @media (max-width: 480px) {
+      header img {
+        max-height: 120px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="header-content">
-      <div style="width: 100%; text-align: center;">
-        <img src="images/logo.png" alt="Dixie Farms Logo">
-      </div>
-      <h1 style="margin-bottom: 0.25rem; font-size: 2.25rem;">Dixie Farms Crawfish & Seafood</h1>
+      <img src="images/DixieFarmsLogoTransparent.png" alt="Dixie Farms Logo">
+      <h1>Dixie Farms Crawfish & Seafood</h1>
     </div>
     <div class="hero" style="height: auto; padding: 1rem 2rem;">
       <p style="margin: 0; font-size: 1.1rem; color: white; text-shadow: 1px 1px 3px rgba(0,0,0,0.6);">
@@ -149,7 +154,6 @@
     <a href="#menu">Menu</a>
     <a href="#catering">Catering</a>
     <a href="#events">Upcoming Events</a>
-    <a href="#gallery">Gallery</a>
     <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -214,15 +218,11 @@
     </div>
   </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <p>Coming soon: photo highlights from our adventures across Pagosa Springs, Durango, and beyond.</p>
-  </section>
-
   <section id="blog">
     <h2>Our Blog</h2>
     <p>Catch up on the latest Dixie Farms news, behind-the-scenes stories, and event recaps.</p>
     <iframe
+      id="blogFrame"
       class="blog-iframe"
       src="https://dixiefarmsco.blogspot.com"
       title="Dixie Farms Blog">
@@ -233,5 +233,21 @@
     <h2>Contact Us</h2>
     <p>Follow us on <a href="https://www.facebook.com/dixiefarmsco" target="_blank" rel="noopener">Facebook</a> or <a href="https://www.instagram.com/dixiefarmsco" target="_blank" rel="noopener">Instagram</a>, or reach out to <a href="mailto:dixiefarmsco@gmail.com">dixiefarmsco@gmail.com</a> with any questions or booking inquiries.</p>
   </section>
+
+  <!-- Adaptive height for blog iframe (cross-origin safe) -->
+  <script>
+    (function() {
+      const MIN_HEIGHT = 900;
+      const VIEWPORT_MULT = 1.2;
+      function resizeBlogFrame() {
+        const frame = document.getElementById('blogFrame');
+        if (!frame) return;
+        const target = Math.max(Math.floor(window.innerHeight * VIEWPORT_MULT), MIN_HEIGHT);
+        frame.style.minHeight = target + 'px';
+      }
+      window.addEventListener('load', resizeBlogFrame);
+      window.addEventListener('resize', resizeBlogFrame);
+    })();
+  </script>
 </body>
 </html>
