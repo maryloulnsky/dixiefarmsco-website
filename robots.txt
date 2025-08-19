@@ -1,0 +1,4 @@
+<!-- robots.txt (place at https://www.dixiefarmsco.com/robots.txt) -->
+User-agent: *
+Allow: /
+Sitemap: https://www.dixiefarmsco.com/sitemap.xml

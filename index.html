@@ -5,19 +5,41 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JWW5WYWYWS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);} 
     gtag('js', new Date());
     gtag('config', 'G-JWW5WYWYWS');
   </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dixie Farms Crawfish & Seafood</title>
+  <title>Dixie Farms Crawfish & Seafood | Cajun Food Truck & Catering in Pagosa Springs, CO</title>
+  <meta name="description" content="Dixie Farms Crawfish & Seafood — Cajun food truck and catering in Pagosa Springs, CO. Seafood boils, shrimp & crab, étouffée, gumbo, and private events." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.dixiefarmsco.com/" />
 
+  <!-- Favicon -->
+<link rel="icon" type="image/png" href="https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.dixiefarmsco.com/" />
+  <meta property="og:title" content="Dixie Farms Crawfish & Seafood | Cajun Food Truck & Catering" />
+  <meta property="og:description" content="Seafood boils, Cajun classics, and private event catering across Southwest Colorado." />
+  <meta property="og:image" content="https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dixie Farms Crawfish & Seafood" />
+  <meta name="twitter:description" content="Cajun food truck & catering in Southwest Colorado." />
+  <meta name="twitter:image" content="https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png" />
+
+  <link rel="icon" href="/favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+  <link rel="dns-prefetch" href="https://calendar.google.com" />
+  <link rel="dns-prefetch" href="https://dixiefarmsco.blogspot.com" />
 
   <style>
     :root {
@@ -56,17 +78,19 @@
     header img {
       max-height: 200px;
       width: auto;
+      height: auto;
+      aspect-ratio: auto;
     }
     h1 {
       font-family: 'Merriweather', serif;
       margin: 0.25rem 0 0.25rem;
+      font-size: clamp(1.75rem, 2.8vw, 2.25rem);
     }
     .tagline {
       font-size: 1.1rem;
       font-weight: 400;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
       margin: 0;
-      /* Modern browsers try to balance line breaks to avoid widows */
       text-wrap: balance;
     }
 
@@ -89,12 +113,10 @@
       padding: 0.25rem 0.5rem;
       border-radius: 6px;
     }
-    nav a:hover, nav a:focus {
-      background: rgba(255,255,255,0.15);
-      outline: none;
-    }
+    nav a:hover, nav a:focus { background: rgba(255,255,255,0.15); outline: none; }
 
-    /* SECTIONS */
+    /* MAIN */
+    main { display:block; }
     section {
       padding: 2rem 1rem;
       max-width: 1000px;
@@ -119,43 +141,79 @@
       border: 0;
     }
 
-    /* Blogger iframe (height set by JS for single-scroll experience) */
-    .blog-iframe {
-      width: 100%;
-      border: none;
-      border-radius: 12px;
-      display: block;
-    }
+    /* Blogger iframe */
+    .blog-iframe { width: 100%; border: none; border-radius: 12px; display: block; }
 
     ul { padding-left: 1.25rem; }
 
-    /* Responsive adjustments */
+    /* Responsive */
     @media (max-width: 768px) {
-      header img {
-        max-height: 150px;
-      }
-      h1 {
-        font-size: 1.75rem;
-      }
+      header img { max-height: 150px; }
+      h1 { font-size: 1.75rem; }
     }
     @media (max-width: 480px) {
-      header img {
-        max-height: 120px;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
+      header img { max-height: 120px; }
+      h1 { font-size: 1.5rem; }
     }
   </style>
+
+  <!-- Structured Data: Food Truck / Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodTruck",
+    "name": "Dixie Farms Crawfish & Seafood",
+    "url": "https://www.dixiefarmsco.com/",
+    "image": "https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png",
+    "description": "Cajun food truck & catering serving seafood boils, gumbo, étouffée, and more across Southwest Colorado.",
+    "email": "mailto:dixiefarmsco@gmail.com",
+    "servesCuisine": ["Cajun", "Seafood"],
+    "areaServed": ["Pagosa Springs CO", "Bayfield CO", "Durango CO", "Silverton CO", "South Fork CO"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pagosa Springs",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.facebook.com/dixiefarmsco",
+      "https://www.instagram.com/dixiefarmsco"
+    ],
+    "hasMenu": "https://www.dixiefarmsco.com/#menu"
+  }
+  </script>
+
+  <!-- Structured Data: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer catering for private events?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We customize seafood boils and Cajun menus for weddings, corporate events, and backyard parties. Use the 'Book Your Catering Event' button to get started."}
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I find your upcoming events?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Our Google Calendar shows all pop-ups and festivals. Follow us on Facebook and Instagram for real-time updates and specials."}
+      },
+      {
+        "@type": "Question",
+        "name": "What Cajun dishes do you serve?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Seasonal crawfish boils, Bairdi snow crab, boudin, andouille and alligator sausages, étouffée, gumbo, bisques, and Mawmaw’s Apple Cake."}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="header-content">
-      <img src="images/DixieFarmsLogoTransparent.png" alt="Dixie Farms Logo">
+      <img src="images/DixieFarmsLogoTransparent.png" alt="Dixie Farms Crawfish & Seafood logo" loading="eager" fetchpriority="high" />
       <h1>Dixie Farms Crawfish & Seafood</h1>
-      <p class="tagline">
-        From private boils to festivals, the Purple People Feeder delivers bold Louisiana flavor wherever we roll.
-      </p>
+      <p class="tagline">From private boils to festivals, the Purple People Feeder delivers bold Louisiana flavor wherever we roll.</p>
     </div>
   </header>
 
@@ -167,86 +225,88 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="menu">
-    <h2>Our Menu</h2>
-    <p>We serve up Southern comfort on a plate—with bold Louisiana flavor and seasonal specialties sourced fresh from the Gulf Coast and beyond. Our menu items rotate throughout the year and availability can vary by event.</p>
+  <main id="main-content">
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <p>We serve up Southern comfort on a plate—with bold Louisiana flavor and seasonal specialties sourced fresh from the Gulf Coast and beyond. Our menu items rotate throughout the year and availability can vary by event.</p>
 
-    <h3>Seafood Boils & Shellfish</h3>
-    <ul>
-      <li><strong>Seasonal Crawfish Boils</strong> – with corn, potatoes, and sausage (when in season)</li>
-      <li><strong>Alaskan Bairdi Snow Crab Clusters</strong></li>
-      <li><strong>Prestige Oysters</strong> – raw or grilled when available</li>
-    </ul>
+      <h3>Seafood Boils &amp; Shellfish</h3>
+      <ul>
+        <li><strong>Seasonal Crawfish Boils</strong> – with corn, potatoes, and sausage (when in season)</li>
+        <li><strong>Alaskan Bairdi Snow Crab Clusters</strong></li>
+        <li><strong>Prestige Oysters</strong> – raw or grilled when available</li>
+      </ul>
 
-    <h3>Links, Rolls & Cajun Classics</h3>
-    <ul>
-      <li><strong>Boudin Links</strong> – crawfish or pork</li>
-      <li><strong>Sausages</strong> – Andouille or alligator, seasoned</li>
-      <li><strong>Sausage Rolls</strong> – on fresh-baked bread</li>
-      <li><strong>Shrimp Salad Rolls</strong> – chilled shrimp tossed in creamy Cajun dressing, served on a fresh roll</li>
-      <li><strong>Crab Salad Rolls</strong> – sweet crab salad with a hint of lemon and spice, served on a fresh roll</li>
-      <li><strong>Crawfish Salad Rolls</strong> – Louisiana crawfish in a tangy house-made mix, served cold on a roll</li>
-    </ul>
+      <h3>Links, Rolls &amp; Cajun Classics</h3>
+      <ul>
+        <li><strong>Boudin Links</strong> – crawfish or pork</li>
+        <li><strong>Sausages</strong> – Andouille or alligator, seasoned</li>
+        <li><strong>Sausage Rolls</strong> – on fresh-baked bread</li>
+        <li><strong>Shrimp Salad Rolls</strong> – chilled shrimp tossed in creamy Cajun dressing, served on a fresh roll</li>
+        <li><strong>Crab Salad Rolls</strong> – sweet crab salad with a hint of lemon and spice, served on a fresh roll</li>
+        <li><strong>Crawfish Salad Rolls</strong> – Louisiana crawfish in a tangy house-made mix, served cold on a roll</li>
+      </ul>
 
-    <h3>Bowls & Bisques</h3>
-    <ul>
-      <li><strong>Shrimp, Sausage & Corn Bisque</strong> – rich and creamy with a Cajun kick</li>
-      <li><strong>Étouffées</strong> – crawfish and shrimp, smothered in traditional Cajun roux over rice</li>
-      <li><strong>Gumbos</strong> – hearty, dark-roux gumbo with seafood or chicken and sausage</li>
-    </ul>
+      <h3>Bowls &amp; Bisques</h3>
+      <ul>
+        <li><strong>Shrimp, Sausage &amp; Corn Bisque</strong> – rich and creamy with a Cajun kick</li>
+        <li><strong>Étouffées</strong> – crawfish and shrimp, smothered in traditional Cajun roux over rice</li>
+        <li><strong>Gumbos</strong> – hearty, dark-roux gumbo with seafood or chicken and sausage</li>
+      </ul>
 
-    <h3>Sides & Snacks</h3>
-    <ul>
-      <li><strong>Zapp’s Chips</strong> – straight from Louisiana! We’re proud to be one of the only suppliers in Southwest Colorado carrying these bold and crunchy classics. Flavors include Voodoo, Regular, Spicy Crawtators, and the original Cajun Crawtators.</li>
-    </ul>
+      <h3>Sides &amp; Snacks</h3>
+      <ul>
+        <li><strong>Zapp’s Chips</strong> – straight from Louisiana! Flavors include Voodoo, Regular, Spicy Crawtators, and Cajun Crawtators.</li>
+      </ul>
 
-    <h3>Desserts</h3>
-    <ul>
-      <li><strong>Mawmaw’s Apple Cake</strong> – a rich, spiced apple cake baked from scratch with love, using Mawmaw’s original recipe passed down through generations. Tastes like home.</li>
-    </ul>
-  </section>
+      <h3>Desserts</h3>
+      <ul>
+        <li><strong>Mawmaw’s Apple Cake</strong> – a rich, spiced apple cake baked from scratch with love.</li>
+      </ul>
 
-  <section id="catering">
-    <h2>Catering & Private Events</h2>
-    <p>Whether you're planning a backyard bash, mountain wedding, corporate retreat, or lively festival, Dixie Farms delivers an unforgettable Cajun experience. We specialize in full-service seafood boils with crawfish, shrimp, Bairdi crab, rich sides, and Mawmaw’s Apple Cake—all served from our 40-foot purple trailer or set up family-style. From rustic to upscale, we tailor the menu, setup, and vibe to match your event perfectly.</p>
-    <p>
-      <a href="https://form.typeform.com/to/h9QcOplW" target="_blank" style="display:inline-block; background: linear-gradient(135deg, var(--purple) 60%, var(--orange)); color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1rem; margin-top: 1rem;">
-        Book Your Catering Event
-      </a>
-    </p>
-  </section>
+      <p><em>Looking for catering?</em> Jump to <a href="#catering">Catering &amp; Private Events</a>.</p>
+    </section>
 
-  <section id="events">
-    <h2>Upcoming Events</h2>
-    <p>See the events calendar below or follow us on <a href="https://www.facebook.com/dixiefarmsco" target="_blank">Facebook</a> or <a href="https://www.instagram.com/dixiefarmsco" target="_blank">Instagram</a> for the latest pop-ups and festivals featuring live music, mechanical bulls, and full Cajun spreads!</p>
-  </section>
+    <section id="catering">
+      <h2>Catering &amp; Private Events</h2>
+      <p>Whether you're planning a backyard bash, mountain wedding, corporate retreat, or lively festival, Dixie Farms delivers an unforgettable Cajun experience. We specialize in full-service seafood boils with crawfish, shrimp, Bairdi crab, rich sides, and Mawmaw’s Apple Cake—all served from our 40-foot purple trailer or set up family-style. From rustic to upscale, we tailor the menu, setup, and vibe to match your event perfectly.</p>
+      <p>
+        <a href="https://form.typeform.com/to/h9QcOplW" target="_blank" rel="noopener" style="display:inline-block; background: linear-gradient(135deg, var(--purple) 60%, var(--orange)); color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1rem; margin-top: 1rem;">
+          Book Your Catering Event
+        </a>
+      </p>
+    </section>
 
-  <section id="calendar" aria-label="Events Calendar">
-    <div class="ratio-4x3">
-      <iframe src="https://calendar.google.com/calendar/embed?src=dixiefarmsco%40gmail.com&ctz=America%2FDenver" frameborder="0" scrolling="no" title="Dixie Farms Google Calendar"></iframe>
-    </div>
-  </section>
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <p>See the events calendar below or follow us on <a href="https://www.facebook.com/dixiefarmsco" target="_blank" rel="noopener">Facebook</a> or <a href="https://www.instagram.com/dixiefarmsco" target="_blank" rel="noopener">Instagram</a> for the latest pop-ups and festivals featuring live music and full Cajun spreads!</p>
+    </section>
 
-  <section id="blog">
-    <h2>Our Blog</h2>
-    <p>Catch up on the latest Dixie Farms news, behind-the-scenes stories, and event recaps.</p>
-    <iframe
-      id="blogFrame"
-      class="blog-iframe"
-      src="https://dixiefarmsco.blogspot.com"
-      title="Dixie Farms Blog">
-    </iframe>
-  </section>
+    <section id="calendar" aria-label="Events Calendar">
+      <div class="ratio-4x3">
+        <iframe src="https://calendar.google.com/calendar/embed?src=dixiefarmsco%40gmail.com&ctz=America%2FDenver" loading="lazy" title="Dixie Farms Google Calendar"></iframe>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Follow us on <a href="https://www.facebook.com/dixiefarmsco" target="_blank" rel="noopener">Facebook</a> or <a href="https://www.instagram.com/dixiefarmsco" target="_blank" rel="noopener">Instagram</a>, or reach out to <a href="mailto:dixiefarmsco@gmail.com">dixiefarmsco@gmail.com</a> with any questions or booking inquiries.</p>
-  </section>
+    <section id="blog">
+      <h2>Our Blog</h2>
+      <p>Catch up on Dixie Farms news, behind-the-scenes stories, and event recaps.</p>
+      <iframe id="blogFrame" class="blog-iframe" src="https://dixiefarmsco.blogspot.com" title="Dixie Farms Blog" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
 
-  <!-- Adaptive height for blog iframe (cross-origin safe) + widont to avoid tagline widow -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <address>
+        <p>Based in <span itemprop="addressLocality">Pagosa Springs</span>, CO — serving the Four Corners.</p>
+        <p>Email: <a href="mailto:dixiefarmsco@gmail.com">dixiefarmsco@gmail.com</a></p>
+        <p>Follow: <a href="https://www.facebook.com/dixiefarmsco" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/dixiefarmsco" target="_blank" rel="noopener">Instagram</a></p>
+      </address>
+    </section>
+  </main>
+
+  <!-- UX/SEO helpers: adaptive blog height + widont -->
   <script>
     (function() {
-      // Blogger iframe sizing
       const MIN_HEIGHT = 900;
       const VIEWPORT_MULT = 1.2;
       function resizeBlogFrame() {
@@ -258,11 +318,9 @@
       window.addEventListener('load', resizeBlogFrame);
       window.addEventListener('resize', resizeBlogFrame);
 
-      // Widont: keep last two words of tagline together to prevent single-word wrap
       function widont(el) {
         if (!el) return;
         const html = el.innerHTML.trim();
-        // Replace the last normal space with a non-breaking space
         el.innerHTML = html.replace(/\s+([^\s<]+)\s*$/, '&nbsp;$1');
       }
       window.addEventListener('DOMContentLoaded', function() {
