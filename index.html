@@ -18,7 +18,7 @@
   <link rel="canonical" href="https://www.dixiefarmsco.com/" />
 
   <!-- Favicon -->
-<link rel="icon" type="image/png" href="https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png" />
+  <link rel="icon" type="image/png" href="https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -79,7 +79,6 @@
       max-height: 200px;
       width: auto;
       height: auto;
-      aspect-ratio: auto;
     }
     h1 {
       font-family: 'Merriweather', serif;
@@ -207,6 +206,71 @@
     ]
   }
   </script>
+
+  <!-- Structured Data: Oyster Fest Events -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Oyster Fest at The Neon Mallard",
+    "startDate": "2025-09-13T13:30-06:00",
+    "endDate": "2025-09-13T17:00-06:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "url": "https://order.toasttab.com/online/dixie-farms-crawfish-seafood",
+    "image": "https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png",
+    "description": "Join Dixie Farms for Oyster Fest at The Neon Mallard in Pagosa Springs. Fresh Gulf oysters on the half shell or to-go, paired with cocktails. Pre-orders available online.",
+    "location": {
+      "@type": "Place",
+      "name": "The Neon Mallard",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "363 Navajo Trail Dr",
+        "addressLocality": "Pagosa Springs",
+        "addressRegion": "CO",
+        "postalCode": "81147",
+        "addressCountry": "US"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Dixie Farms Crawfish & Seafood",
+      "url": "https://www.dixiefarmsco.com"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Oyster Fest at The Lost Goat Tavern",
+    "startDate": "2025-09-14T13:30-06:00",
+    "endDate": "2025-09-14T17:00-06:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "url": "https://order.toasttab.com/online/dixie-farms-crawfish-seafood",
+    "image": "https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png",
+    "description": "Round 2 of Oyster Fest at The Lost Goat Tavern in Bayfield. Fresh Gulf oysters on the half shell or to-go, paired with Bloody Marys and Broncos on the screen. Pre-orders available online.",
+    "location": {
+      "@type": "Place",
+      "name": "The Lost Goat Tavern",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "39848 US-160",
+        "addressLocality": "Bayfield",
+        "addressRegion": "CO",
+        "postalCode": "81122",
+        "addressCountry": "US"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Dixie Farms Crawfish & Seafood",
+      "url": "https://www.dixiefarmsco.com"
+    }
+  }
+  </script>
 </head>
 <body>
   <header>
@@ -216,6 +280,24 @@
       <p class="tagline">From private boils to festivals, the Purple People Feeder delivers bold Louisiana flavor wherever we roll.</p>
     </div>
   </header>
+
+  <!-- Oyster Fest Preorder Section -->
+  <section id="oysterfest" style="background:#fff7f2; padding:2rem 1rem; text-align:center; border-bottom:4px solid var(--orange);">
+    <h2 style="margin:0 0 0.5rem; font-family:'Merriweather',serif; color:var(--purple);">
+      🦪 Oyster Fest Pre-Orders Are Live!
+    </h2>
+    <p style="max-width:700px; margin:0 auto 1rem; font-size:1.1rem;">
+      Join us for <strong>Oyster Weekend</strong> — September 13 &amp; 14 only!  
+      <br />
+      • Saturday, Sept 13 at <strong>The Neon Mallard, Pagosa Springs</strong><br />
+      • Sunday, Sept 14 at <strong>The Lost Goat Tavern, Bayfield</strong>
+    </p>
+    <a href="https://order.toasttab.com/online/dixie-farms-crawfish-seafood" 
+       target="_blank" rel="noopener" 
+       style="display:inline-block; background:linear-gradient(135deg, var(--purple) 60%, var(--orange)); color:#fff; padding:0.9rem 1.75rem; border-radius:10px; font-weight:bold; text-decoration:none; font-size:1.1rem;">
+      👉 Pre-Order Oysters Now
+    </a>
+  </section>
 
   <nav aria-label="Primary">
     <a href="#menu">Menu</a>
@@ -279,7 +361,28 @@
 
     <section id="events">
       <h2>Upcoming Events</h2>
-      <p>See the events calendar below or follow us on <a href="https://www.facebook.com/dixiefarmsco" target="_blank" rel="noopener">Facebook</a> or <a href="https://www.instagram.com/dixiefarmsco" target="_blank" rel="noopener">Instagram</a> for the latest pop-ups and festivals featuring live music and full Cajun spreads!</p>
+
+      <!-- Oyster Fest Callout -->
+      <div style="background:#fff7f2; border:2px solid var(--orange); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem; text-align:center;">
+        <h3 style="margin-top:0; font-family:'Merriweather',serif; color:var(--purple);">
+          🦪 Oyster Fest Weekend – Sept 13 &amp; 14
+        </h3>
+        <p style="margin:0 0 0.75rem; font-size:1.05rem;">
+          • Saturday, Sept 13 at <strong>The Neon Mallard (Pagosa Springs)</strong><br />
+          • Sunday, Sept 14 at <strong>The Lost Goat Tavern (Bayfield)</strong>
+        </p>
+        <a href="https://order.toasttab.com/online/dixie-farms-crawfish-seafood"
+           target="_blank" rel="noopener"
+           style="display:inline-block; background:linear-gradient(135deg, var(--purple) 60%, var(--orange)); color:#fff; padding:0.75rem 1.5rem; border-radius:8px; font-weight:bold; text-decoration:none; font-size:1rem;">
+          👉 Pre-Order Oysters Here
+        </a>
+      </div>
+
+      <p>See the events calendar below or follow us on 
+        <a href="https://www.facebook.com/dixiefarmsco" target="_blank" rel="noopener">Facebook</a> or 
+        <a href="https://www.instagram.com/dixiefarmsco" target="_blank" rel="noopener">Instagram</a> 
+        for the latest pop-ups and festivals featuring live music and full Cajun spreads!
+      </p>
     </section>
 
     <section id="calendar" aria-label="Events Calendar">
@@ -304,7 +407,7 @@
     </section>
   </main>
 
-  <!-- UX/SEO helpers: adaptive blog height + widont -->
+  <!-- UX/SEO helpers -->
   <script>
     (function() {
       const MIN_HEIGHT = 900;

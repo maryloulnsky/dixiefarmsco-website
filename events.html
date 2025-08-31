@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upcoming Events | Dixie Farms Crawfish & Seafood</title>
+  <meta name="description" content="See upcoming Dixie Farms pop‑ups, farmers markets, and catering events across Pagosa Springs, Bayfield, Durango, Silverton, and more." />
+  <link rel="canonical" href="https://www.dixiefarmsco.com/events" />
+  <meta name="robots" content="index,follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    :root{--purple:#795484;--orange:#ff6a00;--bg:#f9f3ef;--text:#333}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Manrope',sans-serif;background:var(--bg);color:var(--text)}
+    header{background:linear-gradient(135deg,var(--purple) 60%,var(--orange));color:#fff;padding:1.25rem 1rem;text-align:center}
+    h1{font-family:'Merriweather',serif;margin:.25rem 0}
+    main{max-width:1000px;margin:2rem auto;padding:0 1rem}
+    .event-list{display:grid;grid-template-columns:1fr;gap:1rem}
+    article{background:#fff;padding:1rem;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+    .when{font-weight:700}
+    .where{opacity:.85}
+    .cta{display:inline-block;margin-top:.5rem;background:linear-gradient(135deg,var(--purple) 60%,var(--orange));color:#fff;padding:.5rem .9rem;border-radius:8px;text-decoration:none;font-weight:700}
+    @media(min-width:720px){.event-list{grid-template-columns:1fr 1fr}}
+  </style>
+
+  <!-- JSON-LD: Event list (update dates/addresses; duplicate per event) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Event",
+        "name":"Bayfield Farmers Market Pop‑Up",
+        "description":"Dinner to‑go while you shop local produce. Étouffée, gumbo, boudin, and more.",
+        "startDate":"2025-08-19T16:00:00-06:00",
+        "endDate":"2025-08-19T19:00:00-06:00",
+        "eventStatus":"https://schema.org/EventScheduled",
+        "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+        "image":["https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png"],
+        "location":{"@type":"Place","name":"Bayfield Farmers Market","address":{"@type":"PostalAddress","streetAddress":"(add street)","addressLocality":"Bayfield","addressRegion":"CO","postalCode":"(zip)","addressCountry":"US"}},
+        "organizer":{"@type":"Organization","name":"Dixie Farms Crawfish & Seafood","url":"https://www.dixiefarmsco.com/"}
+      },
+      {
+        "@type":"Event",
+        "name":"Lunch Pop‑Up at Tractor Supply (Bayfield)",
+        "description":"Cajun lunch: shrimp, sausages, boudin, bisques. Served from the Purple People Feeder.",
+        "startDate":"2025-08-20T11:00:00-06:00",
+        "endDate":"2025-08-20T15:00:00-06:00",
+        "eventStatus":"https://schema.org/EventScheduled",
+        "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+        "image":["https://www.dixiefarmsco.com/images/DixieFarmsLogoTransparent.png"],
+        "location":{"@type":"Place","name":"Tractor Supply Bayfield","address":{"@type":"PostalAddress","streetAddress":"(add street)","addressLocality":"Bayfield","addressRegion":"CO","postalCode":"(zip)","addressCountry":"US"}},
+        "organizer":{"@type":"Organization","name":"Dixie Farms Crawfish & Seafood","url":"https://www.dixiefarmsco.com/"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Upcoming Events</h1>
+    <p>Catch the Purple People Feeder around Southwest Colorado. Times are local (America/Denver).</p>
+  </header>
+  <main>
+    <!-- Replace the sample events below with current dates. Duplicate <article> for new events. -->
+    <section class="event-list" aria-label="Upcoming events list">
+      <article>
+        <h2>Bayfield Farmers Market Pop‑Up</h2>
+        <p class="when">Tue, Aug 19, 2025 · 4:00–7:00 PM</p>
+        <p class="where">Bayfield Farmers Market · Bayfield, CO</p>
+        <p>Grab produce + dinner to‑go. Cajun classics while you shop: étouffée, gumbo, boudin, and more.</p>
+        <a class="cta" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener">Add to Calendar</a>
+      </article>
+
+      <article>
+        <h2>Lunch Pop‑Up at Tractor Supply (Bayfield)</h2>
+        <p class="when">Wed, Aug 20, 2025 · 11:00 AM–3:00 PM</p>
+        <p class="where">Tractor Supply · Bayfield, CO</p>
+        <p>Shrimp, sausages, boudin, and bisques served hot and fast from the Purple People Feeder.</p>
+        <a class="cta" href="https://www.facebook.com/dixiefarmsco" target="_blank" rel="noopener">Event Details</a>
+      </article>
+    </section>
+
+    <section style="margin-top:2rem">
+      <p>Full schedule also on our <a href="/">home page</a> calendar. For pop‑up changes and specials, follow <a href="https://www.facebook.com/dixiefarmsco" target="_blank" rel="noopener">Facebook</a> and <a href="https://www.instagram.com/dixiefarmsco" target="_blank" rel="noopener">Instagram</a>.</p>
+    </section>
+  </main>
+</body>
+</html>
